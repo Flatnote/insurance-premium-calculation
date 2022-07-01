@@ -1,9 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import axios from 'axios';
+import { useEffect } from 'react';
 import './App.css';
+import { Counter } from './features/counter/Counter';
+import logo from './logo.svg';
 
-function App() {
+const apiHost = process.env.REACT_APP_API_HOST || 'http://localhost:5001';
+
+const App = () => {
+  const doGetProduct = async () => {
+    const payload = {
+      genderCd: 'FEMALE',
+      dob: '1983-02-21',
+      planCode: 'T11A20',
+      premiumPerYear: 30000,
+      paymentFrequency: 'YEARLY'
+    };
+    const response = await axios.post(`${apiHost}/getProduct`, payload);
+    const product = response.data;
+    console.log('product', product);
+  };
+
+  useEffect(() => {
+    doGetProduct();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -53,6 +73,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
