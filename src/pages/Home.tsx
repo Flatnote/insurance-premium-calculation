@@ -38,11 +38,11 @@ const Home = () => {
   return (
     <div className="center app-container">
       <motion.div initial="hidden" animate="visible" variants={commonVariants}>
-        <Row gutter={[16, 16]}>
-          <Col span={24}>
+        <Row gutter={[16, 16]} style={{ display: 'flex', justifyContent: 'center' }}>
+          <Col span={20}>
             <h1 className="text-center">Insurance premium calculation</h1>
           </Col>
-          <Col span={24}>
+          <Col span={20}>
             <Radio.Group
               onChange={onChange}
               value={calBy}

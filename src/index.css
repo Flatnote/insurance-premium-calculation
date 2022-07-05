@@ -19,6 +19,7 @@ code {
 
 .app-container {
   min-height: 100vh;
+  margin: 2rem 0;
 }
 
 .rounded-border {
@@ -34,7 +35,12 @@ code {
   text-align: center;
 }
 
+.result-card {
+  width: 80%;
+}
+
 .result-col {
+  width: 80%;
   margin: 0 auto;
 }
 
