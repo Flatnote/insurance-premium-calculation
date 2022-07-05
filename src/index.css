@@ -33,6 +33,20 @@ code {
   text-align: center;
 }
 
+.result-col {
+  margin: 0 auto;
+}
+
+.home-submit-btn {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .home-submit-btn {
+    width: 75%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #222;
@@ -43,11 +57,19 @@ code {
     color: #fff;
   }
 
+  h2 {
+    color: #fff;
+  }
+
   .ant-form-item-label label {
     color: #fff;
   }
 
   .ant-radio-wrapper {
+    color: #fff;
+  }
+
+  .ant-tabs {
     color: #fff;
   }
 }
