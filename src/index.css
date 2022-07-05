@@ -4,6 +4,7 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eaeaea;
 }
 
 code {
@@ -25,7 +26,7 @@ code {
 }
 
 .border {
-  border: 1px solid #eaeaea;
+  border: 1px solid black;
   padding: 2rem;
 }
 
@@ -71,5 +72,9 @@ code {
 
   .ant-tabs {
     color: #fff;
+  }
+
+  .border {
+    border: 1px solid #fff;
   }
 }
